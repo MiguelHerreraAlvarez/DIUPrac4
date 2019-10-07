@@ -75,8 +75,6 @@ public class Mostrador extends javax.swing.JPanel {
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        System.out.println((int)iconPosition.getX());
-        System.out.println((int)iconPosition.getY());
         g.drawImage(img_copy, 0, 0, this);
         g.drawImage(icon, (int)iconPosition.getX(),(int)iconPosition.getY(),
                64,64, this);

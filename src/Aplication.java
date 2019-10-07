@@ -17,7 +17,8 @@ public class Aplication extends javax.swing.JFrame {
         cBoxRed.setSelected(true);
         cBoxBlue.setSelected(true);
         cBoxGreen.setSelected(true);
-        esqSI.setSelected(true);
+        esqID.setSelected(true);
+        mostrador1.setIconPosition(mostrador1.getWidth() -74 ,mostrador1.getHeight() -74);
     }
 
     /** This method is called from within the constructor to
@@ -41,6 +42,8 @@ public class Aplication extends javax.swing.JFrame {
         cBoxBlue = new javax.swing.JCheckBox();
         cBoxGreen = new javax.swing.JCheckBox();
         cBoxAll = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         mostrador1 = new Mostrador();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,7 +109,7 @@ public class Aplication extends javax.swing.JFrame {
                 .add(esqII)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(esqID)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -164,32 +167,45 @@ public class Aplication extends javax.swing.JFrame {
                 .add(cBoxBlue)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(cBoxGreen)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 8, Short.MAX_VALUE)
                 .add(cBoxAll)
                 .addContainerGap())
         );
+
+        jLabel1.setText("Posición del icono");
+
+        jLabel2.setText("Canales de color");
 
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel2Layout.createSequentialGroup()
-                .add(40, 40, 40)
-                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 88, Short.MAX_VALUE)
-                .add(jPanel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .add(22, 22, 22)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel1))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 60, Short.MAX_VALUE)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .add(jLabel2)
+                        .add(44, 44, 44))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .add(jPanel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(20, 20, 20))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel1)
+                    .add(jLabel2))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jPanel2Layout.createSequentialGroup()
-                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(0, 21, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         mostrador1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -210,22 +226,22 @@ public class Aplication extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap()
+                .add(24, 24, 24)
                 .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
+                .addContainerGap(172, Short.MAX_VALUE)
                 .add(mostrador1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(63, 63, 63))
+                .add(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(7, 7, 7)
-                .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 35, Short.MAX_VALUE)
+                .add(jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(31, 31, 31)
                 .add(mostrador1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(34, 34, 34))
+                .add(21, 21, 21))
         );
 
         pack();
@@ -245,10 +261,12 @@ public class Aplication extends javax.swing.JFrame {
             mostrador1.invertMode(false, cBoxBlue.isSelected(), cBoxGreen.isSelected());
             cBoxAll.setSelected(false);
         }*/
+        if(!cBoxBlue.isSelected() && !cBoxGreen.isSelected() && !cBoxRed.isSelected()) cBoxRed.setSelected(true);
         mostrador1.invertMode(cBoxRed.isSelected(), cBoxGreen.isSelected(), cBoxBlue.isSelected());
         if (!cBoxRed.isSelected()) cBoxAll.setSelected(false);
         if(cBoxRed.isSelected()&& cBoxBlue.isSelected()&& cBoxGreen.isSelected()) 
             cBoxAll.setSelected(true);
+        
     }//GEN-LAST:event_cBoxRedActionPerformed
 
     private void cBoxAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBoxAllActionPerformed
@@ -265,18 +283,22 @@ public class Aplication extends javax.swing.JFrame {
 
     private void cBoxBlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBoxBlueActionPerformed
         // TODO add your handling code here:
+        if(!cBoxBlue.isSelected() && !cBoxGreen.isSelected() && !cBoxRed.isSelected()) cBoxBlue.setSelected(true);
         mostrador1.invertMode(cBoxRed.isSelected(), cBoxGreen.isSelected(), cBoxBlue.isSelected());
         if(cBoxRed.isSelected()&& cBoxBlue.isSelected()&& cBoxGreen.isSelected()) 
             cBoxAll.setSelected(true);
         if (!cBoxBlue.isSelected()) cBoxAll.setSelected(false);
+        
     }//GEN-LAST:event_cBoxBlueActionPerformed
 
     private void cBoxGreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBoxGreenActionPerformed
         // TODO add your handling code here:
+        if(!cBoxBlue.isSelected() && !cBoxGreen.isSelected() && !cBoxRed.isSelected()) cBoxGreen.setSelected(true);
         mostrador1.invertMode(cBoxRed.isSelected(), cBoxGreen.isSelected(), cBoxBlue.isSelected());
         if(cBoxRed.isSelected()&& cBoxBlue.isSelected()&& cBoxGreen.isSelected()) 
             cBoxAll.setSelected(true);
         if (!cBoxGreen.isSelected()) cBoxAll.setSelected(false);
+        
     }//GEN-LAST:event_cBoxGreenActionPerformed
 
     private void esqSDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqSDActionPerformed
@@ -343,6 +365,8 @@ public class Aplication extends javax.swing.JFrame {
     private javax.swing.JRadioButton esqSD;
     private javax.swing.JRadioButton esqSI;
     private javax.swing.ButtonGroup grupoEsquina;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
